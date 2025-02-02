@@ -1,0 +1,96 @@
+.product-specs {
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  background-color: white;
+}
+
+.specs-header {
+  padding: 1rem;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.specs-title {
+  font-size: 1.125rem;
+  font-weight: 500;
+  color: #212121;
+}
+
+.specs-content {
+  padding: 1rem;
+}
+
+.specs-category {
+  margin-bottom: 1.5rem;
+}
+
+.specs-category:last-child {
+  margin-bottom: 0;
+}
+
+.category-title {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #212121;
+  margin-bottom: 0.75rem;
+}
+
+.specs-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.specs-item {
+  display: flex;
+  font-size: 0.875rem;
+}
+
+.specs-key {
+  width: 33.333%;
+  color: #6c757d;
+}
+
+.specs-value {
+  width: 66.667%;
+  color: #212121;
+}
+
+.important-info {
+  border-top: 1px solid #e5e7eb;
+  padding: 1rem;
+}
+
+.important-info-title {
+  font-size: 1.125rem;
+  font-weight: 500;
+  color: #212121;
+  margin-bottom: 1rem;
+}
+
+.important-info-list {
+  list-style-type: disc;
+  padding-left: 1.25rem;
+  color: #6c757d;
+  font-size: 0.875rem;
+}
+
+.important-info-list li {
+  margin-bottom: 0.5rem;
+}
+
+.important-info-list li:last-child {
+  margin-bottom: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .specs-item {
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+
+  .specs-key,
+  .specs-value {
+    width: 100%;
+  }
+}

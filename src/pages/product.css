@@ -1,0 +1,109 @@
+.product-page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: #f3f4f5;
+}
+
+.product-main {
+  flex-grow: 1;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0.75rem;
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .product-main {
+    padding: 1.25rem;
+  }
+}
+
+.product-container {
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
+  margin-top: 0.75rem;
+  overflow: hidden;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+@media (min-width: 1024px) {
+  .product-grid {
+    grid-template-columns: minmax(0, 5fr) minmax(0, 4fr) minmax(0, 3fr);
+    gap: 2rem;
+    padding: 1.5rem;
+  }
+
+  .product-grid > div:first-child {
+    padding-right: 1rem;
+    border-right: 1px solid #f3f4f5;
+  }
+
+  .product-grid > div:nth-child(2) {
+    padding-right: 1rem;
+    border-right: 1px solid #f3f4f5;
+  }
+}
+
+.product-specs {
+  border-top: 1px solid #f3f4f5;
+  padding: 1rem;
+}
+
+@media (min-width: 1024px) {
+  .product-specs {
+    padding: 1.5rem;
+  }
+}
+
+.success-toast {
+  position: fixed;
+  bottom: 1.5rem;
+  right: 1.5rem;
+  background-color: #03ac0e;
+  color: white;
+  padding: 1rem 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  z-index: 1000;
+  animation: slideIn 0.3s ease-out;
+  font-size: 0.875rem;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Sticky product actions on mobile */
+@media (max-width: 1023px) {
+  .product-grid > div:last-child {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: white;
+    padding: 0.75rem 1rem;
+    border-top: 1px solid #e5e7eb;
+    z-index: 10;
+    box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.1);
+  }
+
+  /* Add padding to prevent content from being hidden behind sticky actions */
+  .product-container {
+    margin-bottom: 5rem;
+  }
+}

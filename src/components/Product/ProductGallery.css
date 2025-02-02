@@ -1,0 +1,102 @@
+.product-gallery {
+  display: flex;
+  flex-direction: column;
+}
+
+.main-image {
+  width: 100%;
+  margin-bottom: 1rem;
+  position: relative;
+}
+
+.main-image img {
+  width: 100%;
+  height: 400px;
+  object-fit: contain;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  background-color: white;
+}
+
+.thumbnails {
+  display: flex;
+  gap: 0.5rem;
+  overflow-x: auto;
+  padding-bottom: 0.5rem;
+  scrollbar-width: thin;
+  scrollbar-color: #9ca3af transparent;
+}
+
+.thumbnails::-webkit-scrollbar {
+  height: 6px;
+}
+
+.thumbnails::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.thumbnails::-webkit-scrollbar-thumb {
+  background-color: #9ca3af;
+  border-radius: 3px;
+}
+
+.thumbnail-button {
+  flex-shrink: 0;
+  width: 80px;
+  height: 80px;
+  border: 2px solid #e5e7eb;
+  border-radius: 6px;
+  overflow: hidden;
+  cursor: pointer;
+  padding: 0;
+  background: none;
+  transition: border-color 0.2s;
+}
+
+.thumbnail-button:hover {
+  border-color: #9ca3af;
+}
+
+.thumbnail-button.selected {
+  border-color: #03ac0e;
+}
+
+.thumbnail-button img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Zoom feature */
+.zoom-lens {
+  position: absolute;
+  border: 1px solid #d4d4d4;
+  width: 100px;
+  height: 100px;
+  background-repeat: no-repeat;
+  cursor: crosshair;
+  display: none;
+}
+
+.main-image:hover .zoom-lens {
+  display: block;
+}
+
+.zoomed-image {
+  position: absolute;
+  top: 0;
+  left: 100%;
+  margin-left: 1rem;
+  border: 1px solid #d4d4d4;
+  width: 400px;
+  height: 400px;
+  overflow: hidden;
+  background-repeat: no-repeat;
+  display: none;
+}
+
+@media (min-width: 1024px) {
+  .main-image:hover .zoomed-image {
+    display: block;
+  }
+}

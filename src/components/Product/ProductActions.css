@@ -1,0 +1,161 @@
+.product-actions {
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  padding: 1rem;
+}
+
+.quantity-section {
+  margin-bottom: 1.25rem;
+}
+
+.quantity-label {
+  font-size: 0.875rem;
+  color: #6c757d;
+  margin-bottom: 0.75rem;
+}
+
+.quantity-controls {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.quantity-button {
+  width: 2rem;
+  height: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #e5e7eb;
+  border-radius: 4px;
+  background: white;
+  cursor: pointer;
+  font-size: 1.125rem;
+  color: #03ac0e;
+  transition: all 0.2s;
+  user-select: none;
+}
+
+.quantity-button:hover:not(:disabled) {
+  border-color: #03ac0e;
+  background-color: #e6f6f3;
+}
+
+.quantity-button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  color: #9ca3af;
+}
+
+.quantity-input {
+  width: 3.5rem;
+  height: 2rem;
+  text-align: center;
+  border: 1px solid #e5e7eb;
+  border-radius: 4px;
+  font-size: 0.875rem;
+  color: #212121;
+  -moz-appearance: textfield;
+}
+
+.quantity-input::-webkit-outer-spin-button,
+.quantity-input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.quantity-input:focus {
+  outline: none;
+  border-color: #03ac0e;
+}
+
+.stock-info {
+  font-size: 0.875rem;
+  color: #6c757d;
+}
+
+.action-buttons {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.cart-button,
+.buy-button {
+  flex: 1;
+  height: 2.75rem;
+  padding: 0 1rem;
+  font-weight: 600;
+  font-size: 0.875rem;
+  border-radius: 8px;
+  transition: all 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cart-button {
+  border: 1px solid #03ac0e;
+  color: #03ac0e;
+  background: white;
+}
+
+.cart-button:hover {
+  background-color: #e6f6f3;
+}
+
+.buy-button {
+  background-color: #03ac0e;
+  color: white;
+  border: none;
+}
+
+.buy-button:hover {
+  background-color: #03910c;
+}
+
+.secondary-actions {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid #e5e7eb;
+}
+
+.secondary-button {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.875rem;
+  color: #6c757d;
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.secondary-button:hover {
+  color: #03ac0e;
+}
+
+.secondary-button span {
+  font-size: 1.125rem;
+}
+
+/* Mobile Styles */
+@media (max-width: 1023px) {
+  .product-actions {
+    border: none;
+    border-radius: 0;
+    padding: 0;
+  }
+
+  .action-buttons {
+    margin: 0;
+  }
+
+  .quantity-section,
+  .secondary-actions {
+    display: none;
+  }
+}
