@@ -1,0 +1,140 @@
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.search-wrapper {
+  flex: 1;
+  background-color: #f3f4f5;
+  padding-top: 8px;
+  padding-bottom: 24px;
+}
+
+.search-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+.search-breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 12px;
+  font-size: 14px;
+  color: #6c727c;
+  padding: 8px 0;
+}
+
+.search-breadcrumb .separator {
+  color: #e5e7e9;
+}
+
+.search-breadcrumb .current {
+  color: #212121;
+  font-weight: 500;
+}
+
+.search-results {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+}
+
+.search-sidebar {
+  position: sticky;
+  top: 16px;
+  width: 240px;
+  flex-shrink: 0;
+}
+
+.search-main {
+  flex: 1;
+  min-width: 0;
+}
+
+/* Responsive styles */
+@media (max-width: 1200px) {
+  .search-content {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 992px) {
+  .search-content {
+    padding: 0 12px;
+  }
+}
+
+@media (max-width: 768px) {
+  .search-wrapper {
+    padding-top: 4px;
+    padding-bottom: 16px;
+  }
+
+  .search-content {
+    padding: 0 8px;
+  }
+
+  .search-results {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .search-sidebar {
+    position: static;
+    width: 100%;
+  }
+
+  .search-breadcrumb {
+    font-size: 12px;
+    margin-bottom: 8px;
+    overflow-x: auto;
+    white-space: nowrap;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+
+  .search-breadcrumb::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+/* Scroll to top button */
+.scroll-to-top {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  width: 40px;
+  height: 40px;
+  background: #fff;
+  border: none;
+  border-radius: 50%;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 100;
+}
+
+.scroll-to-top.visible {
+  opacity: 1;
+  visibility: visible;
+}
+
+.scroll-to-top:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.scroll-to-top svg {
+  width: 20px;
+  height: 20px;
+  color: #212121;
+}

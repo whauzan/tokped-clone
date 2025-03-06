@@ -42,13 +42,13 @@
   }
 
   .product-grid > div:first-child {
-    padding-right: 1rem;
-    border-right: 1px solid #f3f4f5;
+    /* padding-right: 1rem; */
+    /* border-right: 1px solid #f3f4f5; */
   }
 
   .product-grid > div:nth-child(2) {
-    padding-right: 1rem;
-    border-right: 1px solid #f3f4f5;
+    /* padding-right: 1rem; */
+    /* border-right: 1px solid #f3f4f5; */
   }
 }
 
