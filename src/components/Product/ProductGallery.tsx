@@ -1,4 +1,4 @@
-import { useState, useRef, useEffect } from 'react';
+import { useState, useRef } from 'react';
 import './ProductGallery.css';
 
 interface ProductGalleryProps {
@@ -37,7 +37,6 @@ const ProductGallery = ({ images, productName }: ProductGalleryProps) => {
     zoomLensRef.current.style.top = `${lensY}px`;
 
     // Calculate and update zoomed image position
-    const zoomFactor = 2;
     const bgX = (lensX / width) * 100;
     const bgY = (lensY / height) * 100;
     zoomedImageRef.current.style.backgroundPosition = `${bgX}% ${bgY}%`;
